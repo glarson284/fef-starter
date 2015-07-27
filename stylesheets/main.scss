@@ -1,23 +1,36 @@
-@import 'jr-framework';
+@import 'salmon-framework';
 
-#example-rounded{
-  @include rounded-button(7px);
-  width: 70px;
-  font: Arial;
-  background-color: red;
-  color: white;
+.condensed-nav {
+  top: 50px;
+}
+.pill-nav {
+  top: 00px;
+}
+body {
+  background-color: #FFE0E0;
+}
+h1 {
+  text-align: center;
 }
 
-#example-centered-wrapper{
-  width: 70px;
-  height: 70px;
-  border: thin black solid;
-}
-
-#example-centered{
-  @include vertically-centered-element;
+.buttons {
   margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  background: lime;
+  margin-top: 100px;
+  text-align: center;
+}
+.round , .squ, .alert-button {
+  display: inline-block;
+  
+  padding: 10px;
+}
+.round > div , .squ > div, .alert-button > div {
+  margin: 0 auto;
+}
+
+.clear {
+  height: 100px;
+}
+
+.sign-up {
+  margin-top: 50px;
 }

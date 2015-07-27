@@ -1,0 +1,51 @@
+.example-rounded{
+  @include rounded-button(7px);
+  width: 70px;
+  background-color: #B2B2B2;
+  color: white;
+  &:hover {
+    background-color: #999999;
+  }
+}
+.example-square{
+  @include rounded-button(0px);
+  width: 70px;
+  background-color: #B2B2B2;
+  color: white;
+  &:hover {
+    background-color: #999999;
+  }
+}
+.example-alert{
+  @include rounded-button(7px);
+  width: 70px;
+  background-color: red;
+  color: white;
+  &:hover {
+    background-color: darkred;
+  }
+}
+ 
+
+#pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid salmon;
+  border-left: 60px solid salmon;
+  border-bottom: 60px solid salmon;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  // display: inline;
+}
+#circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  // display: inline;
+}

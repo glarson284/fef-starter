@@ -1,0 +1,232 @@
+@import 'mixins';
+
+
+@import url(http://fonts.googleapis.com/css?family=Gruppo);
+
+body {
+  font-family: 'Gruppo', cursive;
+}
+.condensed-nav {
+  @include condensed-nav;
+  ul {
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #E6E6E6;
+    padding: 0px;
+  }
+  li{
+    display: inline;
+    padding: 0 5px;
+
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 0 3px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  a:hover {
+    // font-weight: bold;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+}
+
+.spaced-out-nav{
+  @include spaced-out-nav;
+  
+  ul {
+    text-align: center;
+  }
+  li{
+    display: inline;
+    padding: 0 50px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+  }
+}
+
+
+.pill-nav{
+  @include pill-nav;
+  ul {
+      text-align: center;
+      padding: 0px;
+      float: left;
+    }
+    li{
+      display: inline;
+      padding: 0 5px;
+
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 0 3px;
+      padding: 10px;
+      font-weight:bold;
+    }
+    a:hover {
+      // font-weight: bold;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      color: salmon;
+    }
+  }
+
+
+
+.example-centered-wrapper{
+  width: 70px;
+  height: 70px;
+  border: thin black solid;
+}
+
+.example-centered{
+  @include vertically-centered-element;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background: #994D4D;
+}
+
+input {
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  padding: 5px;
+}
+input:focus{
+  outline-color: salmon;
+}
+.sign-in, .sign-up {
+  margin: 0 auto;
+  text-align: center;
+  background: #ccc;
+  padding: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+
+}
+.sign-in {
+  width: 30%;
+  min-width: 150px;
+
+}
+.sign-in, .sign-up label {
+  margin-bottom: 10px;
+}
+.sign-up {
+  width: 40%;
+}
+.form{
+  display: inline-block;
+}
+input{
+  text-align: center;
+}
+
+@for $i from 1 through 6 {
+ h#{$i} { font-size: (56-($i * 12)+ px)}
+}
+
+@media all and (max-width:900px) {
+  .spaced-out-nav, .pill-nav {
+    li {
+      padding: 0 30px;
+    }
+  }
+}
+
+@media all and (max-width:550px) {
+  .spaced-out-nav, .pill-nav {
+    li {
+      padding: 0 10px;
+    }
+  }
+}
+@media all and (max-width:400px) {
+  .spaced-out-nav, .pill-nav {
+    li {
+      display: none;
+    }
+  }
+}
+
+
+
+  @media screen and (max-width: 768px) {
+    .spaced-out-nav, .pill-nav{ 
+        #menu {
+          width:1.4em;
+          display: block;
+          font-size:1.35em;
+          text-align: center;
+          cursor: pointer;
+          padding-bottom: 2px;
+          &:hover {
+          background: white;
+          border-radius: 5px;
+        }
+        }
+
+        #nav.js {
+          display: none;
+        }
+        ul {
+          width:100%;
+        }
+        li {
+          width:100%;
+          border-right:none;
+          display: block;
+          padding: 10px;
+        }
+      }
+    }
+  @media screen and (min-width: 768px) {
+    .spaced-out-nav, .pill-nav {
+      #menu {
+        display: none;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

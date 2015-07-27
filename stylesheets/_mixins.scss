@@ -1,11 +1,36 @@
+
 @mixin rounded-button($radius){
   cursor: pointer;
   border-radius: $radius;
   text-align: center;
+  padding: 10px;
 }
 
 @mixin vertically-centered-element{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+@mixin spaced-out-nav {
+  background-color: #B2B2B2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 3px;
+}
+
+@mixin condensed-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+@mixin pill-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: salmon;
+  // padding: 10px;
 }
